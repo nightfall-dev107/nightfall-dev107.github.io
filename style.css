@@ -1,0 +1,44 @@
+body {
+margin: 0;
+background: black;
+color: white;
+font-family: Arial, sans-serif;
+overflow: hidden;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#intro-text {
+font-size: 2rem;
+opacity: 0;
+animation: fadein 4s forwards;
+z-index: 2;
+}
+
+@keyframes fadein {
+0% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+#shadow {
+position: absolute;
+bottom: 10px;
+left: -10px;
+height: 200px;
+opacity: 0;
+filter: blur(4px);
+transition: opacity 5s ease;
+}
+
+#scare {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+height: 0;
+opacity: 0;
+transition: all 0.08s ease;
+z-index: 999;
+}
